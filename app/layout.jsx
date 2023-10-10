@@ -1,11 +1,14 @@
 import "@styles/globals.css";
 
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
+
 export const metadata = {
   title: "Promptai",
   description: "Sharing and having fun with AI Prompts",
 };
 
-const RootLayout = ({children}) => {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
@@ -13,7 +16,10 @@ const RootLayout = ({children}) => {
           <div className="gradient" />
         </div>
 
-        <main className="app">{children}</main>
+        <main className="app">
+          <Nav/>
+          {children}
+        </main>
       </body>
     </html>
   );
